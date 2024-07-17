@@ -226,7 +226,8 @@ header{
 }
 @media (max-width:396px) {
     :root{
-        font-size: 4px;
+        font-size: 4
+        px;
     }
 }
 /* 
