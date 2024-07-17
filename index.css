@@ -1,0 +1,311 @@
+/* Jaldi For Logo */
+body{
+    background-color: #043697;
+    font-family: 'Libre Franklin',sans-serif;
+    overflow: auto;
+    
+}
+img{
+    display: block;
+    width: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+a,p{
+    text-decoration: none;
+    font-family: 'Libre Franklin',sans-serif;
+    color: black;
+}
+.wrapper{
+    display: flex;
+   
+}
+header{
+    position: sticky;
+    top: 0;
+    background-color: #043697;
+}
+.stickynav{
+    position: sticky;
+    top: 5.944375rem;
+    margin-bottom: 0.3rem;
+}
+.left-container{
+    width: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+.left-container a img{
+    width: 3rem;
+    display: inline;
+    vertical-align: middle;
+    margin-inline: 0.5rem;
+    rotate: 20deg;
+}
+.left-container a{
+    
+   font-family: 'Jaldi';
+   text-transform: uppercase;
+   font-size: 2rem;
+   font-weight: bold;
+   color: white;
+   
+}
+.left-container .quote{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    
+}
+.middle-container{
+    align-items: center;
+
+    flex: 1;
+    justify-content: center;
+}
+.middle-container form{
+   
+    min-width: 3;
+    max-width: 30rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 55%;
+   
+    border-radius: 3rem;
+    overflow: hidden;
+}
+.middle-container form:focus-within{
+    outline: solid yellow 0.5rem;
+    outline-offset: -1px;
+}
+.middle-container input{
+    height: 100%;
+    width: 90%;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+}
+.middle-container button{
+    background-image: url('images/search.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 2rem;
+    width: 10%;
+    padding: 1rem;
+    height: 100%;
+    cursor: pointer;
+}
+.myaccount-container{
+        align-items: center;
+        
+        justify-content: center;
+        width: 15rem;
+        font-size: 2rem;
+}
+.myaccount-container a{
+    color: white;
+    font-weight: bold;
+
+}
+.navList{
+    list-style-type: none;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-inline: 0.5rem;
+}
+.navList li{
+    flex: 1;
+}
+.navList a {
+    display: block;
+    padding: 0.5rem;
+    width: 100%;
+    text-align: center;
+    border-right: 0.2em solid black;
+    font-size: 1.3rem;
+}
+.navList a:hover{
+    background-color: rgb(187, 187, 187);
+    color: white;
+}
+.navList li:first-child{
+    border-left: 0.2em solid black;
+}
+
+.image-container{
+    overflow: auto;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    
+}
+.image-container::-webkit-scrollbar {
+    display: none;
+}
+.image-container img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: contain;
+ 
+}
+.flash-sales{
+    margin: 3rem 2rem;
+    background-color: rgb(131, 131, 131);
+    padding: 1rem;
+    border-radius: 1rem;
+  
+}
+.flash-sales > p{
+    margin: 1rem;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.item-sales{
+    gap: 1rem;
+    overflow: auto;
+    border-radius: 1.5rem;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    
+}
+.item-sales::-webkit-scrollbar{
+    display: none;
+}
+.item{
+    min-width: 21.5rem;
+    background-color: yellow;
+    overflow:hidden;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    scroll-snap-align: start;
+    height: 26rem;
+    
+}
+.info{
+    padding-inline: 0.5rem;
+}
+.name{
+    font-size: 2rem;
+}
+.relative-container{
+    position: relative;
+}
+.action-button{
+    position: absolute;
+    padding:  0.5rem 1rem;
+    top:50%;
+    margin-inline: 1rem;
+    text-align: center;
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 50rem;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+#nextBtn{
+    right: 1rem;
+}
+/* Media Queries */
+@media (max-width:811px) {
+    :root{
+        font-size: 8px;
+    }
+}
+@media (max-width:396px) {
+    :root{
+        font-size: 4px;
+    }
+}
+/* 
+
+
+@media (max-width: 811px){
+    .left-container{
+        width: 20rem;
+    }
+    .left-container a{
+        font-size: 1.5rem;
+    }
+    .middle-container{
+        justify-content: center;
+        align-items: center;
+    }
+    .myaccount-container{
+        display: none;
+    }
+    .navList a{
+        font-size: 0.8rem;
+        
+    }
+
+    .item{
+        min-width: 10rem;
+        height: 15rem;
+    }
+    
+    
+    
+}
+@media (max-width: 499px){
+    .left-container{
+        width: 15rem;
+    }
+    .left-container a,.left-container .quote{
+        font-size: 1rem;
+    }
+    .middle-container{
+        justify-content: center;
+        align-items: center;
+    }
+    .myaccount-container{
+        display: none;
+    }
+    .navList a{
+        font-size: 0.8rem;
+        
+    }
+    .navList li:last-child, .navList li:nth-child(6){
+        display: none;
+    
+}
+    .item{
+        min-width: 3rem;
+        height: 8rem;
+        border-radius: 0.5rem;
+    }
+    .item *{
+        font-size: 0.4rem;
+        color: green;
+    }
+    .flash-sales >p{
+        font-size: 2rem;
+    }
+    .item-sales{
+        border-radius: 0.5rem;
+      
+    }
+    .flash-sales{
+        margin-inline: 1rem;
+    }
+
+    .action-button{
+        padding:0.3rem ;
+    }
+    
+    
+    
+}
+ */
