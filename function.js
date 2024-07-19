@@ -4,6 +4,8 @@ const container =  document.getElementById('imgContainer');
 const nextBtn = document.getElementById('nextBtn');
 const prevBtn = document.getElementById('prevBtn');
 const item_sales = document.getElementById('item-sales');
+
+
 let currentItemDisplay=0;
 
 nextBtn.addEventListener('click',()=>{
@@ -14,12 +16,16 @@ prevBtn.addEventListener('click',()=>{
 });
 
 function scrollItem(btn){
-    let increment = item_sales.clientWidth/2;
-   
+    const item = document.getElementsByClassName('item');
+    
+    let increment =item[0].clientWidth;
+    console.log(increment);
+    console.log(currentItemDisplay);
+    console.log(item[0].clientWidth * (item.length-4));
     if(currentItemDisplay===0 && btn===0){
         return;
     }
-    if(currentItemDisplay===2919&&btn===1){
+    if(currentItemDisplay>=(item[0].clientWidth * (item.length-4))&&btn===1){
         return;
     }
    
