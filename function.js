@@ -1,58 +1,69 @@
+const indicator =document.getElementsByClassName("indicator");
+const itemContainer =document.getElementsByClassName("item-container")[0];
+const carousellSlider = document.getElementById("carousell-slider");
+let carousellPosition = 0;
+indicatorSlider();
+setItems();
 
+function setItems(){
+    for(let index=0; index<=5;index++){
+    let s=`<div class="container item">
+                                        <img src="images/p2-controller.png" alt="">
+                                        <div class="container item-info">
+                                            <p class="product-name" id="productName">Product Name</p>
+                                            <p class="product-discount" id="productDiscount">product Discount</p>
+                                            <p class="product-price" id="productPrice">Product Price</p>
+                                        </div>
+                                    </div>`;
 
-const container =  document.getElementById('imgContainer');
-const nextBtn = document.getElementById('nextBtn');
-const prevBtn = document.getElementById('prevBtn');
-const item_sales = document.getElementById('item-sales');
-
-
-let currentItemDisplay=0;
-
-nextBtn.addEventListener('click',()=>{
-    scrollItem(1);
-});
-prevBtn.addEventListener('click',()=>{
-    scrollItem(0);
-});
-
-function scrollItem(btn){
-    const item = document.getElementsByClassName('item');
-    
-    let increment =item[0].clientWidth;
-    console.log(increment);
-    console.log(currentItemDisplay);
-    console.log(item[0].clientWidth * (item.length-4));
-    if(currentItemDisplay===0 && btn===0){
-        return;
-    }
-    if(currentItemDisplay>=(item[0].clientWidth * (item.length-4))&&btn===1){
-        return;
-    }
-   
-   switch(btn){
-    case 1:
-        currentItemDisplay+=increment;
-        break;
-    case 0:
-        currentItemDisplay-=increment;
-        break;    
-   }
-  
-        item_sales.scrollTo(currentItemDisplay,0);
-
+    itemContainer.innerHTML+=s;        
+    }                        
 }
 
-let scrollLenth = container.clientWidth;
-setInterval(()=>{
-   
 
-    container.scrollTo(scrollLenth,0);
-    
-    scrollLenth+=container.clientWidth;
-   
-    if(scrollLenth>=(container.clientWidth*5)){
-        scrollLenth= 0;
+//Set the EventListener for carousell navigation
+function indicatorSlider(){
+    console.log(indicator.length);
+    for(let index = 0; index< indicator.length;index++){
+        //Will Pass the index of clicked navigation
+        indicator[index].addEventListener('click', ()=>clickedHandle(index));
+       
     }
+    carousellSlide();
+    clickedHandle(carousellPosition);
+}
+function clickedHandle(index){
+    //Get the clicked indicator
+    let clickedItem = indicator[index].id;
+    carousellPosition = index;
+
+    //Set those other indicators background color to white
+    for(let index = 0; index  < indicator.length;index++){
+        indicator[index].style.backgroundColor="#ffffff";
+    }
+    //Set the clicked indicator to blue
+    document.getElementById(clickedItem).style.backgroundColor="#001DB5";
+    
+    //Slide the carousell
+   sliderPosition(index);
 
 }
-,4000);
+function sliderPosition(position){
+        
+        let childWidth = Number(carousellSlider.clientWidth);
+        carousellSlider.scrollTo(childWidth*position,0);
+}
+
+function carousellSlide(){
+
+   
+    setInterval(()=>{
+        
+       clickedHandle(carousellPosition);
+        //sliderPosition(carousellPosition);
+        carousellPosition++;
+        if(carousellPosition==5){
+            carousellPosition=0;
+        }
+    },3000);
+}
