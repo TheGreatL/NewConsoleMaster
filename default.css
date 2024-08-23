@@ -94,18 +94,6 @@ header{
     background-color: rgba(180, 180, 180, 0.877);
 }
 
-@media  (max-width: 977px){
-    :root{
-        font-size: 10px;
-    }
-    .search-form{
-        padding: 0;
-    }
-    .left-header{
-        min-width: 15rem;
-    }
-  
-}
 
 
 .right-header{
@@ -141,7 +129,7 @@ header{
 }
 .sticky-nav{
     position: sticky;
-    top: 14%; /* Stick to the top of the viewport */
+    top: 19%; /* Stick to the top of the viewport */
     z-index: 1000; /* Ensure it stays above other content */
 }
 
@@ -286,6 +274,22 @@ header{
     font-weight: 900;
     font-size: 1.5rem;
 }
+
+
+@media  (max-width: 977px){
+    :root{
+        font-size: 10px;
+    }
+    .search-form{
+        padding: 0;
+    }
+    .left-header{
+        min-width: 15rem;
+    }
+    .sticky-nav{
+        top: 13.5%;
+    }
+}
 @media  (min-width: 2000px){
     :root{
         font-size: 24.5px;
@@ -332,6 +336,34 @@ header{
     }
     #searchButton{
         width: 100%;
+    }
+    .flash-sales-container{
+        margin: 5rem 1rem;
+    }
+    .flash-sales-container > p{
+        margin: 1rem;
+    }
+    .item-container{
+        padding: 1rem;
+        margin: 1rem;
+      
+    }
+    .item{
+        max-width: 13rem;    
+    }
+
+    .movement-button{
+        display: none;
+    }
+    .navigation>li:last-child{
+        display: none;
+    }
+    .carousell-container{
+        box-shadow: none;
+    }
+    .image-container>img{
+        height: 25rem;
+        object-fit: contain;
     }
 }
 input{

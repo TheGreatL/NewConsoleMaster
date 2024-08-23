@@ -42,7 +42,7 @@ function clickedHandle(index){
         indicator[index].style.backgroundColor="#ffffff";
     }
     //Set the clicked indicator to blue
-    document.getElementById(clickedItem).style.backgroundColor="#001DB5";
+    document.getElementById(clickedItem).style.backgroundColor="#757575";
     
     //Slide the carousell
    sliderPosition(index);
