@@ -355,7 +355,7 @@ header{
     .movement-button{
         display: none;
     }
-    .navigation>li:last-child{
+    .navigation>li:last-child,.navigation>li:nth-last-child(2){
         display: none;
     }
     .carousell-container{
