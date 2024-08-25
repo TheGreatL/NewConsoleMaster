@@ -1,5 +1,5 @@
-const indicator =document.getElementsByClassName("indicator");
-const itemContainer =document.getElementsByClassName("item-container")[0];
+const indicator =document.querySelectorAll(".indicator");
+const itemContainer =document.querySelector(".item-container");
 const carousellSlider = document.getElementById("carousell-slider");
 let carousellPosition = 0;
 indicatorSlider();
@@ -24,11 +24,9 @@ function setItems(){
 //Set the EventListener for carousell navigation
 function indicatorSlider(){
     console.log(indicator.length);
-    for(let index = 0; index< indicator.length;index++){
-        //Will Pass the index of clicked navigation
-        indicator[index].addEventListener('click', ()=>clickedHandle(index));
-       
-    }
+    indicator.forEach((element,index)=>{
+        element.addEventListener('click',()=>clickedHandle(index));
+    });
     carousellSlide();
     clickedHandle(carousellPosition);
 }

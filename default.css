@@ -129,7 +129,7 @@ header{
 }
 .sticky-nav{
     position: sticky;
-    top: 19%; /* Stick to the top of the viewport */
+    top: 14%; /* Stick to the top of the viewport */
     z-index: 1000; /* Ensure it stays above other content */
 }
 
