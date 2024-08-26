@@ -2,28 +2,89 @@ const indicator =document.querySelectorAll(".indicator");
 const itemContainer =document.querySelector(".item-container");
 const carousellSlider = document.getElementById("carousell-slider");
 let carousellPosition = 0;
+let itemSlider = 0;
+
+const itemsArray=[
+                    {productName:"Ps2 Controller1", productDiscount:"P2000",productPrice:"P2000",productImage:"images/p2-controller.png"},
+                    {productName:"Ps2 Controller2", productDiscount:"P2000",productPrice:"P2000",productImage:"images/p2-controller.png"},
+                    {productName:"Ps2 Controller3", productDiscount:"P2000",productPrice:"P2000",productImage:"images/p2-controller.png"},
+                    {productName:"Ps2 Controller4", productDiscount:"P2000",productPrice:"P2000",productImage:"images/p2-controller.png"},
+                    {productName:"Ps2 Controller5", productDiscount:"P2000",productPrice:"P2000",productImage:"images/p2-controller.png"},
+                    {productName:"Ps2 Controller6", productDiscount:"P2000",productPrice:"P2000",productImage:"images/p2-controller.png"},
+                    {productName:"Ps2 Controller7", productDiscount:"P2000",productPrice:"P2000",productImage:"images/p2-controller.png"},
+                    {productName:"Ps2 Controller8", productDiscount:"P2000",productPrice:"P2000",productImage:"images/p2-controller.png"},
+                    {productName:"Ps2 Controller9", productDiscount:"P2000",productPrice:"P2000",productImage:"images/p2-controller.png"},
+                    {productName:"Ps2 Controller10", productDiscount:"P2000",productPrice:"P2000",productImage:"images/p2-controller.png"}
+                    ];
 indicatorSlider();
+
+initializeMovementButton();
+function initializeMovementButton(){
+    const movementButton = document.querySelectorAll('.movement-button');
+    movementButton.forEach(button =>button.addEventListener('click',moveFlashSales));
+}
+function moveFlashSales(event){
+
+    if(event.target.id ==='nextButton'){
+        console.log(event.target.id);
+        itemContainer.scrollTo(itemSlider+=200,0);
+
+    }
+    else if(event.target.id ==='backButton'){
+        console.log(event.target.id);
+        itemContainer.scrollTo(itemSlider-=200,0);
+
+    }
+}
+
 setItems();
-
 function setItems(){
-    for(let index=0; index<=5;index++){
-    let s=`<div class="container item">
-                                        <img src="images/p2-controller.png" alt="">
-                                        <div class="container item-info">
-                                            <p class="product-name" id="productName">Product Name</p>
-                                            <p class="product-discount" id="productDiscount">product Discount</p>
-                                            <p class="product-price" id="productPrice">Product Price</p>
-                                        </div>
-                                    </div>`;
+    itemsArray.forEach((element,index)=>{
+            const itemDiv= document.createElement("div");
+            itemDiv.className="container item";
+            itemDiv.id = "item"+index;
 
-    itemContainer.innerHTML+=s;        
-    }                        
+            const productImageTag = document.createElement("img");
+            productImageTag.src=element.productImage;
+            productImageTag.alt =element.productName;
+            itemDiv.appendChild(productImageTag);
+
+
+            const itemInfoDiv= document.createElement("div");
+            itemInfoDiv.className="container item-info";
+            const productNameTag = document.createElement("p");
+            productNameTag.className= "product-name";
+            productNameTag.textContent =element.productName;
+            itemInfoDiv.appendChild(productNameTag);
+
+            const productDiscountTag = document.createElement("p");
+            productDiscountTag.className="product-discount";
+            productDiscountTag.textContent = element.productDiscount;
+            itemInfoDiv.appendChild(productDiscountTag);
+
+            const productPriceTag = document.createElement("p");
+            productPriceTag.className ="product-price"; 
+            productPriceTag.textContent=element.productPrice;
+            itemInfoDiv.appendChild(productPriceTag);
+
+            itemDiv.appendChild(itemInfoDiv);
+            itemContainer.appendChild(itemDiv);
+    });
+    console.log(itemContainer.childElementCount);
+    const items = document.querySelectorAll('.item');
+    items.forEach((item,index )=> {
+        item.addEventListener('click',()=>{
+            console.log(itemsArray[index]);
+            const itemClicked = itemsArray[index];
+            localStorage.setItem('productName',itemClicked.productName);
+            window.location.href="product_details.html";
+        });
+    });
 }
 
 
 //Set the EventListener for carousell navigation
 function indicatorSlider(){
-    console.log(indicator.length);
     indicator.forEach((element,index)=>{
         element.addEventListener('click',()=>clickedHandle(index));
     });
@@ -35,10 +96,8 @@ function clickedHandle(index){
     let clickedItem = indicator[index].id;
     carousellPosition = index;
 
-    //Set those other indicators background color to white
-    for(let index = 0; index  < indicator.length;index++){
-        indicator[index].style.backgroundColor="#ffffff";
-    }
+    //Set those other indicators background color to white  
+    indicator.forEach(element=>element.style.backgroundColor="#ffffff");
     //Set the clicked indicator to blue
     document.getElementById(clickedItem).style.backgroundColor="#757575";
     
