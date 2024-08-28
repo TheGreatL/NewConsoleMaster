@@ -4,15 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>product Details</title>
+    <link rel="stylesheet" href="Navigation_Style.css">
+    <link rel="stylesheet" href="product_details_style.css">
+    <script type="module" src="product_details_function.js" defer></script>
     
 </head>
-<body>
-        <p>Product Details</p>
-        <script>
-            const productname =document.createElement('p');
-            productname.textContent = ""+localStorage.getItem('productName');
-                // document.body.appendChild(v);
-                document.body.append(productname);
-        </script>
+    <body>
+        <header>
+            <div class="container">
+                <div class="left-header container">
+                    <a class="home-icon" href="index.html">
+                    Consoles<img src="images/white-controller.png" alt="Console Masters">Masters
+                    </a>
+                    <a class="home-icon" href="index.html">
+                    gear up for greatness
+                    </a>
+            </div>
+            <div class="middle-header container">
+                    <form class="search-form">
+                        <input id="searchInput" type="text" placeholder="Search...">
+                        <button id="searchButton" class=" searchBtn button" title="Search" type="button"></button>
+                    </form>
+            </div>
+            <div class="right-header container">
+                <a href="">My Account</a>
+                <a href=""><img src="images/search.png" alt="My Cart Icon"></a>
+                
+            </div>
+            </div>
+           
+        </header>
+            <nav class="sticky-nav">
+            <div class="container">
+                <ul class="container navigation">
+                    <li><a class="navigation-links" href="#">Home</a></li>
+                    <li><a class="navigation-links" href="#">Consoles</a></li>
+                    <li><a class="navigation-links" href="#">Games</a></li>
+                    <li><a class="navigation-links" href="#">Specials</a></li>
+                    <li><a class="navigation-links" href="#">Accessories</a></li>
+                    <li><a class="navigation-links" href="#">Track Order</a></li>
+                    <li><a class="navigation-links" href="#">Physical Store</a></li>
+                </ul>
+    
+            </div>
+        </nav>
+        <main>
+            <section class="wrapper">
+                <div class="container image-container">
+                    <div class="container other-image-container">
+                       <img  src="images/p2-controller.png" alt="">
+                       <img  src="images/p2-controller.png" alt="">
+                       <img  src="images/p2-controller.png" alt="">
+                       <img  src="images/p2-controller.png" alt="">
+                    </div>
+                    <div class="container">
+                            <img id="productImage" src="" alt="">
+                    </div>
+                       
+                </div>
+                <div class="container product-info-container">
+                        <div class="container info-part-container">
+                            <p id="creator">NBA2K</p>
+                            <p id="productName">NSW NBA 2K24 Kobe Bryant Edition (US)</p>
+                            <div class="container reviews-container">
+                                    <p id="reviewsIcon">⭐⭐⭐⭐⭐</p>
+                                    <p>Available in Stock</p>
+                            </div>  
+                            <div class="container social-container">
+                                    <p id="stockId">Game Key: 23123</p>
+                                    <ul class="container social-icon-container">
+                                        
+                                        <li>
+                                            <a rel="noopener" title="Facebook" href="https://www.facebook.com/" target="_blank">
+                                            <img src="images/social-icons/facebook.png" alt="Facebook" class="social-icon">
+                                            </a>
+                                        </li>
+                                        <li><a rel="noopener" title="Instagram" href="https://www.instagram.com/" target="_blank"><img src="images/social-icons/instagram.png" alt="Instagram" class="social-icon"></a></li>
+                                        <li><a rel="noopener" title="Tiktok" href="https://www.tiktok.com/explore" target="_blank"><img src="images/social-icons/tik-tok.png" alt="Tiktok" class="social-icon"></a></li>
+                                        <li><a rel="noopener" title="X" href="https://www.x.com/"  target="_blank"><img src="images/social-icons/twitter.png" alt="X" class="social-icon"></a></li>
+                                    </ul>
+                            </div>
+                        </div>
+                        <div class="container info-part-container">
+                            <p>Price:</p>
+                            <p id="price">112123</p>
+
+                            <form class="container"  id="quantity-form">
+                                <label for="quantity-form">Quantity:</label>
+                                    <div class="container">
+                                        <p id="quantity">23</p>
+                                        <div class="container button-container">
+                                            <button class="button" id="addButton" type="button">+</button>
+                                            <button class="button" type="button">-</button>
+                                        </div>
+                                    </div>
+                            </form>
+                            <button class="button" id="addToCartButton">Add To Cart</button>
+                        </div>
+                        <div class="container info-part-container">
+                            <p>Description:</p>
+                            <p id="productDescription">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, suscipit quis dolor culpa unde repellat magnam repudiandae adipisci mollitia facilis maiores voluptates eligendi, alias dolorem ipsam similique non ullam ut!</p>
+                        </div>
+                </div>
+            </section>
+              
+        </main>
     </body>
 </html>

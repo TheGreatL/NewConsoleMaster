@@ -1,21 +1,13 @@
+import {getItem,getItemSize,getAllItems} from './items.js'
+
+const itemsArray = getAllItems();
 const indicator =document.querySelectorAll(".indicator");
 const itemContainer =document.querySelector(".item-container");
 const carousellSlider = document.getElementById("carousell-slider");
 let carousellPosition = 0;
 let itemSlider = 0;
 
-const itemsArray=[
-                    {productName:"Ps2 Controller1", productDiscount:"P2000",productPrice:"P2000",productImage:"images/p2-controller.png"},
-                    {productName:"Ps2 Controller2", productDiscount:"P2000",productPrice:"P2000",productImage:"images/p2-controller.png"},
-                    {productName:"Ps2 Controller3", productDiscount:"P2000",productPrice:"P2000",productImage:"images/p2-controller.png"},
-                    {productName:"Ps2 Controller4", productDiscount:"P2000",productPrice:"P2000",productImage:"images/p2-controller.png"},
-                    {productName:"Ps2 Controller5", productDiscount:"P2000",productPrice:"P2000",productImage:"images/p2-controller.png"},
-                    {productName:"Ps2 Controller6", productDiscount:"P2000",productPrice:"P2000",productImage:"images/p2-controller.png"},
-                    {productName:"Ps2 Controller7", productDiscount:"P2000",productPrice:"P2000",productImage:"images/p2-controller.png"},
-                    {productName:"Ps2 Controller8", productDiscount:"P2000",productPrice:"P2000",productImage:"images/p2-controller.png"},
-                    {productName:"Ps2 Controller9", productDiscount:"P2000",productPrice:"P2000",productImage:"images/p2-controller.png"},
-                    {productName:"Ps2 Controller10", productDiscount:"P2000",productPrice:"P2000",productImage:"images/p2-controller.png"}
-                    ];
+
 indicatorSlider();
 
 initializeMovementButton();
@@ -70,13 +62,18 @@ function setItems(){
             itemDiv.appendChild(itemInfoDiv);
             itemContainer.appendChild(itemDiv);
     });
-    console.log(itemContainer.childElementCount);
     const items = document.querySelectorAll('.item');
     items.forEach((item,index )=> {
         item.addEventListener('click',()=>{
-            console.log(itemsArray[index]);
-            const itemClicked = itemsArray[index];
-            localStorage.setItem('productName',itemClicked.productName);
+            localStorage.setItem('productID',index+1);
+            // console.log(itemsArray[index]);
+            // const itemClicked = itemsArray[index];
+            // localStorage.setItem('productName',itemClicked.productName);
+            // localStorage.setItem('productDiscount',itemClicked.productDiscount);
+            // localStorage.setItem('productImage',itemClicked.productImage);
+            // localStorage.setItem('productPrice',itemClicked.productPrice);
+            // console.log(getItem(localStorage.getItem('productID')));
+            // console.log( localStorage.getItem('productID'));
             window.location.href="product_details.html";
         });
     });
