@@ -59,7 +59,8 @@ body::-webkit-scrollbar{
 }
 .social-container{
     align-items: center;
-
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 .social-icon-container{
     max-width: 7rem;
@@ -68,6 +69,7 @@ body::-webkit-scrollbar{
     align-items: center;
 
 }
+
 #productName{
     font-size: 2.5rem;
     font-weight: 700;
@@ -75,9 +77,15 @@ body::-webkit-scrollbar{
 }
 #stockId{
     flex: 1;
+    align-self: center;
 }
 .reviews-container{
-    align-items:flex-end;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.reviews-container >p{
+    font-weight: 700;
+    font-size: 1.5rem;
 }
 
 label{
@@ -87,6 +95,7 @@ label{
     font-size: 2rem;
     padding: 0.5rem;
 }
+
 /* 
 @media(max-width:800px){
     :root{

@@ -8,7 +8,6 @@ let carousellPosition = 0;
 let itemSlider = 0;
 
 
-indicatorSlider();
 
 initializeMovementButton();
 function initializeMovementButton(){
@@ -16,19 +15,22 @@ function initializeMovementButton(){
     movementButton.forEach(button =>button.addEventListener('click',moveFlashSales));
 }
 function moveFlashSales(event){
-
+    console.log(itemSlider);
+    const item = document.querySelector('.item');
+    
     if(event.target.id ==='nextButton'){
         console.log(event.target.id);
-        itemContainer.scrollTo(itemSlider+=200,0);
+        itemContainer.scrollTo(itemSlider+=item.clientWidth,0);
 
     }
     else if(event.target.id ==='backButton'){
         console.log(event.target.id);
-        itemContainer.scrollTo(itemSlider-=200,0);
+        itemContainer.scrollTo(itemSlider-=item.clientWidth,0);
 
     }
 }
 
+indicatorSlider();
 setItems();
 function setItems(){
     itemsArray.forEach((element,index)=>{
@@ -66,14 +68,6 @@ function setItems(){
     items.forEach((item,index )=> {
         item.addEventListener('click',()=>{
             localStorage.setItem('productID',index+1);
-            // console.log(itemsArray[index]);
-            // const itemClicked = itemsArray[index];
-            // localStorage.setItem('productName',itemClicked.productName);
-            // localStorage.setItem('productDiscount',itemClicked.productDiscount);
-            // localStorage.setItem('productImage',itemClicked.productImage);
-            // localStorage.setItem('productPrice',itemClicked.productPrice);
-            // console.log(getItem(localStorage.getItem('productID')));
-            // console.log( localStorage.getItem('productID'));
             window.location.href="product_details.html";
         });
     });

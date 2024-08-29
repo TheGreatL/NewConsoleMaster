@@ -27,5 +27,14 @@ otherItemPicture.forEach(picture=>{
     picture.alt = selectedItem.productName;
     
 });
+const productCreator = document.getElementById('creator');
+productCreator.textContent = selectedItem.productCreator;
+
+const productReviews =document.getElementById('reviewsIcon');
+for(let index= 0;index<selectedItem.productReviewsCount;index++){
+    productReviews.textContent+=' ⭐ ';
+}
+productReviews.textContent+=`${selectedItem.productReviewsCount} Reviews`;
     // document.body.appendChild(v);
-   
+const productGameKey = document.getElementById('stockId');
+productGameKey.textContent =`GameKey: ${selectedItem.productID}`;   
