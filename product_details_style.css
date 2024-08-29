@@ -21,8 +21,7 @@ body::-webkit-scrollbar{
     padding-inline: 1rem;
 }
 #productImage{
-    min-width: 30rem;
-    background-color: green;
+    width: 30rem;
 }
 .image-container img{
     object-fit: contain;

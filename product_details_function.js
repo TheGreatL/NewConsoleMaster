@@ -20,5 +20,12 @@ productName.textContent = selectedItem.productName;
 const productImg = document.getElementById('productImage');
 productImg.src = selectedItem.productImage;
 productImg.alt = selectedItem.productName;
+
+const otherItemPicture = document.querySelectorAll('.other-item-picture');
+otherItemPicture.forEach(picture=>{
+    picture.src = selectedItem.productImage;
+    picture.alt = selectedItem.productName;
+    
+});
     // document.body.appendChild(v);
    
