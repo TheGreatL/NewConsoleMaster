@@ -87,17 +87,18 @@ label{
     font-size: 2rem;
     padding: 0.5rem;
 }
+/* 
 @media(max-width:800px){
     :root{
         font-size: 12px;
     }
-    /* .image-container{
+    .image-container{
         width: 15rem;
 
     }
     #productImage{
         width: 13rem;
-    } */
+    }
     .wrapper{
         flex-direction: column-reverse;
     }
@@ -106,13 +107,113 @@ label{
     :root{
         font-size: 8px;
     }
-    /* .image-container{
+    .image-container{
         width: 15rem;
         
     }
     #productImage{
         width: 13rem;
-    } */
+    }
+ 
+} */
+@media  (max-width: 977px){
+    :root{
+        font-size: 10px;
+    }
+    .search-form{
+        padding: 0;
+    }
+    .left-header{
+        min-width: 15rem;
+    }
+    .wrapper{
+        flex-direction: column-reverse;
+    }
+
+}
+@media  (min-width: 2000px){
+    :root{
+        font-size: 25px;
+    }
+    .sticky-nav{
+        top: 6.7rem;
+    }
+    .header{
+        background-color: green;
+    }
+    
+
+}
+@media  (max-width: 500px){
+    :root{
+        font-size: 7px;
+    }
+    .left-header{
+        min-width: 10rem;
+    }
+
+    .right-header{
+        min-width: 5rem;
+    
+    }
+    .wrapper{
+        flex-direction: column-reverse;
+    }
+}
+@media (max-width:450px) {
+
+    .left-header{
+        min-width: 5rem;
+    }
+    .middle-header{
+        max-width: 1rem;
+    }
+    .right-header{
+      display: none;
+    }
+    .right-header>a:last-child{
+        display: none;
+    }
+    .right-header>a{
+        font-size: 0.9rem;
+    }
+    .flash-sales-container{
+        margin: 5rem;
+    }
+    #searchInput{
+        display: none;
+    }
+    #searchButton{
+        width: 100%;
+    }
+    .flash-sales-container{
+        margin: 5rem 1rem;
+    }
+    .flash-sales-container > p{
+        margin: 1rem;
+    }
+    .item-container{
+        padding: 1rem;
+        margin: 1rem;
+      
+    }
+    .item{
+        max-width: 13rem;    
+    }
+
+    .movement-button{
+        display: none;
+    }
+    .navigation>li:last-child,.navigation>li:nth-last-child(2){
+        display: none;
+    }
+    .carousell-container{
+        box-shadow: none;
+    }
+    .image-container>img{
+        height: 25rem;
+        object-fit: contain;
+    }
     .wrapper{
         flex-direction: column-reverse;
     }
