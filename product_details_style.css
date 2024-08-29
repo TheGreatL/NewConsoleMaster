@@ -91,13 +91,13 @@ label{
     :root{
         font-size: 12px;
     }
-    .image-container{
+    /* .image-container{
         width: 15rem;
 
     }
     #productImage{
         width: 13rem;
-    }
+    } */
     .wrapper{
         flex-direction: column-reverse;
     }
@@ -106,13 +106,13 @@ label{
     :root{
         font-size: 8px;
     }
-    .image-container{
+    /* .image-container{
         width: 15rem;
         
     }
     #productImage{
         width: 13rem;
-    }
+    } */
     .wrapper{
         flex-direction: column-reverse;
     }
