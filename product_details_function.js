@@ -29,3 +29,25 @@ productGameKey.textContent =`GameKey: ${selectedItem.productID}`;
 
 const productPrice =document.getElementById('price');
 productPrice.textContent=`Price: ${selectedItem.productPrice}`;
+
+const quantity = document.getElementById('quantity');
+const quantityButtons = document.querySelectorAll('.quantityButton');
+quantityButtons.forEach(button=>{
+    button.addEventListener('click',event=>{
+        
+        if(event.target.textContent==='+')
+            quantity.textContent++;
+        
+        // Minus Button
+        else{
+            //If lower or equal to 0, do nothing
+            if(quantity.textContent<=0){
+                return;
+            }
+            quantity.textContent--;
+        } 
+
+    });
+});
+const description = document.getElementById('description');
+description.textContent = selectedItem.productDescription;

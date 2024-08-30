@@ -7,6 +7,7 @@ const itemsArray=[
         productImage:"images/item-image/PS2Console.png",
         productCreator:"BandamCo",
         productReviewsCount:4,
+        productDescription:'Description 1'
     },
     {
         productID:2,
@@ -16,7 +17,7 @@ const itemsArray=[
         productImage:"images/item-image/ReadDed.png",
         productCreator:"BandamCo",
         productReviewsCount:5,
-        
+        productDescription:'Description 2'
     },
     {
         productID:3,
@@ -26,6 +27,7 @@ const itemsArray=[
         productImage:"images/item-image/Rectangle 24.png",
         productCreator:"BandamCo",
         productReviewsCount:3,
+        productDescription:'Description 3'
     },
     {
         productID:4,
@@ -35,6 +37,7 @@ const itemsArray=[
         productImage:"images/item-image/ps2-controller.png",
         productCreator:"BandamCo",
         productReviewsCount:2,
+        productDescription:'Description 4'
     },
     {
         productID:5,
@@ -44,6 +47,7 @@ const itemsArray=[
         productImage:"images/item-image/PS4 Controller.png",
         productCreator:"BandamCo",
         productReviewsCount:5,
+        productDescription:'Description 5'
     },
     {
         productID:6,
@@ -53,6 +57,7 @@ const itemsArray=[
         productImage:"images/item-image/Rectangle 25.png",
         productCreator:"BandamCo",
         productReviewsCount:3,
+        productDescription:'Description 6'
     },
     {
         productID:7,
@@ -62,6 +67,7 @@ const itemsArray=[
         productImage:"images/item-image/Rectangle 26.png",
         productCreator:"BandamCo",
         productReviewsCount:4,
+        productDescription:'Description 7'
     },
     {
         productID:8,
@@ -71,6 +77,7 @@ const itemsArray=[
         productImage:"images/item-image/Rectangle 28.png",
         productCreator:"BandamCo",
         productReviewsCount:4,
+        productDescription:'Description 8'
     },
     {
         productID:9,
@@ -80,6 +87,7 @@ const itemsArray=[
         productImage:"images/item-image/Rectangle 29.png",
         productCreator:"BandamCo",
         productReviewsCount:1,
+        productDescription:'Description 11'
     },
     {
         productID:10,
@@ -89,6 +97,7 @@ const itemsArray=[
         productImage:"images/item-image/p2-controller.png",
         productCreator:"BandamCo",
         productReviewsCount:5,
+        productDescription:'Description 10'
     }
     ];
   

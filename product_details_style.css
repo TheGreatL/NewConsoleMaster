@@ -216,9 +216,7 @@ label{
     .sticky-nav{
         top: 6.7rem;
     }
-    .header{
-        background-color: green;
-    }
+   
     
 
 }
@@ -241,7 +239,13 @@ label{
 @media (max-width:450px) {
 
     .left-header{
-        min-width: 5rem;
+        max-width: 20rem;
+        
+        align-items: center;
+        justify-content: center;
+    }
+    .left-header >a{
+        font-size:1.3rem;
     }
     .middle-header{
         max-width: 1rem;
@@ -294,5 +298,8 @@ label{
     }
     .wrapper{
         flex-direction: column-reverse;
+    }
+    .sticky-nav{
+        top: 0.5rem;
     }
 }
