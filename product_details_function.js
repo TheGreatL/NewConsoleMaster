@@ -1,19 +1,7 @@
 import {getItem,getItemSize,getAllItems} from './items.js'
 const selectedItem = getItem(Number(localStorage.getItem('productID')));
 console.log(selectedItem);
-// const productname =document.createElement('p');
-// productname.textContent = ""+localStorage.getItem('productName');
-//     // document.body.appendChild(v);
-//     document.body.append(productname);
 
-// const productDiscount =document.createElement('p');
-// productDiscount.textContent = ""+localStorage.getItem('productDiscount');
-//     // document.body.appendChild(v);
-//     document.body.append(productDiscount);
-    
-// const productPrice =document.createElement('p');
-// productPrice.textContent = ""+localStorage.getItem('productPrice');
-//     document.body.append(productPrice);
 const productName = document.getElementById('productName');
 productName.textContent = selectedItem.productName;   
 
@@ -38,3 +26,6 @@ productReviews.textContent+=`${selectedItem.productReviewsCount} Reviews`;
     // document.body.appendChild(v);
 const productGameKey = document.getElementById('stockId');
 productGameKey.textContent =`GameKey: ${selectedItem.productID}`;   
+
+const productPrice =document.getElementById('price');
+productPrice.textContent=`Price: ${selectedItem.productPrice}`;

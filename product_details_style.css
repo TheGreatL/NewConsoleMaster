@@ -94,6 +94,75 @@ label{
 .button{
     font-size: 2rem;
     padding: 0.5rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s,box-shadow 0.3s;
+}
+.button:hover{
+    box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.351);
+}
+#price{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.quantity-container{
+    background-color: lightgray;
+    border-radius: 15rem;
+
+    min-width: 15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+#quantity-form{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+#quantity-form > label{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+#quantity{
+    flex: 1;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+#addQuantityButton,#deductQuantityButton{
+    padding: 0 0.5rem;
+    border-radius: 1rem;
+    background-color: lightgray;
+    text-align: center;
+    vertical-align: middle;
+
+  
+    
+}
+.button-container{
+    background-color: gray;
+    min-width: 5rem;
+    justify-content: space-around;
+    padding: 0.3rem 0;
+    align-items: center;
+    
+
+}
+#addToCartButton{
+    background-color: #0000ff;
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    max-width: 20rem;
+    border-radius: 2rem;
+    transition: background-color 0.3s,box-shadow 0.3s;
+  
+   
+}
+#addToCartButton:hover{
+    background-color: #0808c3;
+    box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.351);
 }
 
 /* 
